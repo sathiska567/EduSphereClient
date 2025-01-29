@@ -1,6 +1,10 @@
 import axios from "axios";
 
-const baseURL = process.env.REACT_APP_NODE_ENV === "development" ? process.env.REACT_APP_LOCAL_BASE_URL : process.env.REACT_APP_SERVER_BASE_URL;
+
+const baseURL =
+  import.meta.env.REACT_APP_NODE_ENV === "development"
+    ? import.meta.env.REACT_APP_LOCAL_BASE_URL
+    : import.meta.env.REACT_APP_SERVER_BASE_URL;
 
 const api = axios.create({
   baseURL: `${baseURL}/api/v1`,
