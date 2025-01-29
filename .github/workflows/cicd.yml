@@ -1,4 +1,4 @@
-name: Deploy ReactJs EduSpere Application
+name: Deploy ReactVite EduSpere Application
 
 on:
   push:
