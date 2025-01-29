@@ -1,5 +1,5 @@
 # Build stage
-FROM node:alpine3.18 AS build  # <-- Add "AS build" here
+FROM node:alpine3.18 AS build  
 
 # Declare build time environment variables
 ARG REACT_APP_NODE_ENV
