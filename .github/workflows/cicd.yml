@@ -23,7 +23,7 @@ jobs:
         run: |
           docker build -t sathiskasasindu/edusphere-client \
           --build-arg REACT_APP_NODE_ENV='production' \
-          --build-arg REACT_APP_SERVER_BASE_URL='${{secrets.REACT_APP_SERVER_BASE_URL}}' \
+          --build-arg REACT_APP_SERVER_BASE_URL='http://13.60.31.119:4000' \
           .
         
       - name: Push Docker Image to Docker Hub
