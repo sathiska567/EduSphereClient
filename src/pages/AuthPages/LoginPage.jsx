@@ -56,6 +56,15 @@ const LoginPage = () => {
     }
   };
 
+
+  const handleRegisterNavigate = async()=>{
+    try {
+      navigate("/register") 
+    } catch (error) {
+       message.error('Failed to Navigate Register Page.');
+    }
+  }
+
   return (
     <div style={{ 
       display: 'flex', 
@@ -113,7 +122,7 @@ const LoginPage = () => {
 
             <div style={{ textAlign: 'center', fontSize: '0.875rem' }}>
               <span style={{ color: '#8c8c8c' }}>Don't have an account? </span>
-              <a href="/register" style={{ textDecoration: 'none' }}>
+              <a href="#" style={{ textDecoration: 'none' }} onClick={handleRegisterNavigate}>
                 Register
               </a>
             </div>
