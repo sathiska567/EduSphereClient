@@ -65,6 +65,14 @@ const LoginPage = () => {
     }
   }
 
+  const handleForgottenNavigate = async()=>{
+    try {
+      navigate("/forgot-password") 
+    } catch (error) {
+       message.error('Failed to Navigate Register Page.');
+    }
+  }
+
   return (
     <div style={{ 
       display: 'flex', 
@@ -112,7 +120,7 @@ const LoginPage = () => {
               />
             </Form.Item>
 
-            <a href="/forgot-password">Forgotten Password</a>
+            <a href="#" onClick={handleForgottenNavigate}>Forgotten Password</a>
 
             <Form.Item style={{ marginTop: '1.5rem' }}>
               <Button type="primary" htmlType="submit" block>
