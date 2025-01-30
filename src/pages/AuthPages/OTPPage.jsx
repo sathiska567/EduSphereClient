@@ -67,6 +67,14 @@ const OTPPage = () => {
     setOtp(newOtp);
   };
 
+  const handleLoginNavigate = async()=>{
+    try {
+      navigate("/login") 
+    } catch (error) {
+       message.error('Failed to Navigate Login Page.');
+    }
+  }
+
   return (
     <div className="container-fluid vh-100">
       <div className="row h-100">
@@ -108,7 +116,7 @@ const OTPPage = () => {
 
               <div className="text-center small">
                 <span className="text-secondary">Didn't receive the code? </span>
-                <a href="/login" className="text-decoration-none text-primary">
+                <a href="#" className="text-decoration-none text-primary" onClick={handleLoginNavigate}>
                   login
                 </a>
               </div>

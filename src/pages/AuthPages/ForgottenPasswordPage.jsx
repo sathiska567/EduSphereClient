@@ -97,6 +97,14 @@ const ForgottenPasswordPage = () => {
     return '';
   };
 
+  const handleLoginNavigate = async()=>{
+    try {
+      navigate("/login") 
+    } catch (error) {
+       message.error('Failed to Navigate Login Page.');
+    }
+  }
+
   return (
     <Spin spinning={loading} tip="Sending reset instructions...">
       <div className="container-fluid vh-100">
@@ -141,7 +149,7 @@ const ForgottenPasswordPage = () => {
                 </button>
 
                 <div className="text-center small">
-                  <a href="/login" className="text-decoration-none text-primary">
+                  <a href="#" className="text-decoration-none text-primary" onClick={handleLoginNavigate}>
                     Back to Login
                   </a>
                 </div>
